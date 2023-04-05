@@ -1,0 +1,91 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+body{
+    display: grid;
+    grid-template-rows: 100px 1fr 60px;
+    height: 100vh;
+    padding: 20px;
+    margin: 0px 110px 0px 240px;
+}
+
+header{
+    text-align: center;
+    font-size: 30px;
+}
+
+.photo{
+    font-family: 'Pacifico', cursive;
+}
+
+.galery{
+    font-family: 'Fasthand', cursive;
+    color: rgb(238, 234, 8);
+}
+
+main{
+    display: grid;
+    grid-template-areas: 
+         "title cards"
+         "title cards"
+         "graphic graphic";
+    grid-template-rows: 3fr 2fr 100px;
+    grid-template-columns: 2fr 450px;
+    column-gap: 10px;
+    row-gap: 10px;
+}
+
+.title-container{
+    grid-area: title;
+    background-color: turquoise;
+}
+
+.graphic-container{
+    grid-area: graphic;
+    background-color: brown;
+}
+
+.posts-container{
+    grid-area: posts;
+    background-color: cadetblue;
+}
+
+.cards-container{
+    display: grid;
+    grid-area: cards;
+    grid-template-areas: 
+         "post1 post2"
+         "post3 post4";
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 5px;
+    column-gap: 5px;
+}
+
+.foto2{
+    background-color: blueviolet;
+    grid-area: post1;
+}
+
+.foto3{
+    background-color: coral;
+    grid-area: post2;
+}
+
+.foto4{
+    background-color: darkgreen;
+    grid-area: post3;
+}
+
+.foto5{
+    background-color: darkslateblue;
+    grid-area: post4;
+}
+
+footer{
+    background-color: lightgreen;
+}
