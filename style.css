@@ -6,86 +6,171 @@
 }
 
 body{
-    display: grid;
-    grid-template-rows: 100px 1fr 60px;
-    height: 100vh;
-    padding: 20px;
-    margin: 0px 110px 0px 240px;
+   height: 100vh;
+   width: 100vw;
+   display: grid;
+   grid-template-rows: 100px 1fr 100px;
+   padding-left: 350px;
+   padding-right: 350px;
+   font-family: 'Fasthand', cursive;
+   background-image: url(./img/Design\ sem\ nome.png);
+   background-size: cover;
+   background-repeat: no-repeat;
 }
 
 header{
-    text-align: center;
-    font-size: 30px;
+    display: grid;
+    place-items: center;
+    justify-content: center;
 }
 
-.photo{
-    font-family: 'Pacifico', cursive;
+h1{
+    width: 100%;
+    font-style: 'Pacifico', cursive;
+    color: gold;
+    font-size: 3.5em;
 }
 
-.galery{
-    font-family: 'Fasthand', cursive;
-    color: rgb(238, 234, 8);
-}
-
-main{
+.galeria{
+    height: 100%;
+    width: 100%;
     display: grid;
     grid-template-areas: 
-         "title cards"
-         "title cards"
-         "graphic graphic";
-    grid-template-rows: 3fr 2fr 100px;
-    grid-template-columns: 2fr 450px;
-    column-gap: 10px;
-    row-gap: 10px;
+    "f1 f1 f1 f1 f1 f2 f2 f2 f3 f3 f3"
+    "f1 f1 f1 f1 f1 f4 f4 f4 f5 f5 f5"
+    "f6 f6 f6 f7 f7 f7 f8 f8 f8 f8 f8";
+    gap: 12px;
 }
 
-.title-container{
-    grid-area: title;
-    background-color: turquoise;
+.foto{
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    transition: 1s;
 }
 
-.graphic-container{
-    grid-area: graphic;
-    background-color: brown;
+.foto:nth-child(1){
+    grid-area: f1;
+    background-image: url(./img/31ecdcdf1518c6fe9300a87d4dab4d7e.jpg);
+    background-position: center;
 }
 
-.posts-container{
-    grid-area: posts;
-    background-color: cadetblue;
+.foto:nth-child(2){
+    grid-area: f2;
+    background-image: url(./img/41ea0cc8b47e2b12967e1e07f6269c1e.jpg);
+    background-position: center;
 }
 
-.cards-container{
+.foto:nth-child(3){
+    grid-area: f3;
+    background-image: url(./img/EzYdsUOXoAYTu1C.jpg);
+    background-position: center;
+}
+
+.foto:nth-child(4){
+    grid-area: f4;
+    background-image: url(./img/Screenshot_20230428-111242.png);
+    background-position: center;
+}
+
+.foto:nth-child(5){
+    grid-area: f5;
+    background-image: url(./img/tumblr_ebe2272050ec2e4d0696cb002cbdfe9e_037a0ca4_1280\ \(1\).jpg);
+    background-position: center;
+}
+
+.foto:nth-child(6){
+    grid-area: f6;
+    background-image: url(./img/tumblr_754a1a0b5439622c4cd532093126080e_8992f91d_1280.jpg);
+    background-position: center;
+}
+
+.foto:nth-child(7){
+    grid-area: f7;
+    background-image: url(./img/E2ANnKvWQAQoYeb.jpg);
+    background-position: center;
+}
+
+.foto:nth-child(8){
+    grid-area: f8;
+    background-image: url(./img/tumblr_367bac66d3a27db673f3a4b615bd3583_975ab9dc_1280.jpg);
+    background-position: top;
+}
+
+.foto_info{
+    position: absolute;
+    width: 100%;
+    height: 48px;
+    bottom: 0;
+    background-color: gold;
+    transform: translateY(100%);
+    transition: 1s;
+    color: white;
+    border-radius: 0px 10px 10px 0px;
     display: grid;
-    grid-area: cards;
-    grid-template-areas: 
-         "post1 post2"
-         "post3 post4";
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
-    row-gap: 5px;
-    column-gap: 5px;
 }
 
-.foto2{
-    background-color: blueviolet;
-    grid-area: post1;
+.foto_info a{
+    color: white;
+    text-decoration: none;
+    place-self: center;
+    font-size: 1.2em;
 }
 
-.foto3{
-    background-color: coral;
-    grid-area: post2;
+.foto:hover > .foto_info{
+    transform: translateY(0%);
 }
 
-.foto4{
-    background-color: darkgreen;
-    grid-area: post3;
-}
-
-.foto5{
-    background-color: darkslateblue;
-    grid-area: post4;
+.foto_info a:hover{
+    text-decoration: underline;
 }
 
 footer{
-    background-color: lightgreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ver_mais{
+    border-radius: 50px;
+    background-color: gold;
+    align-items: center;
+    width: 150px;
+    height: 50px;
+    font-size: 1.5em;
+    display: flex;
+    justify-content: center;
+}
+
+.ver_mais * {
+    text-decoration: none;
+    color: white;
+}
+
+.ver_mais:hover{
+    background-color: gold;
+    border-style: solid;
+    border-color: goldenrod;
+    transform: scale(1.1);
+}
+
+@media (max-width:768px){
+    body{
+        height: auto;
+        padding-right: 24px;
+        padding-left: 24px;
+        background-position: center;
+    }
+
+    .galeria{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .foto{
+        width: 100%;
+        height: 33vh;
+    }
 }
