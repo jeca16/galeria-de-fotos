@@ -108,7 +108,7 @@ h1{
     transform: translateY(100%);
     transition: 1s;
     color: white;
-    border-radius: 0px 10px 10px 0px;
+    border-radius: 0px 5px 5px 0px;
     display: grid;
 }
 
@@ -153,7 +153,7 @@ footer{
     background-color: gold;
     border-style: solid;
     border-color: goldenrod;
-    transform: scale(1.1);
+    transform: scale(1.0);
 }
 
 @media (max-width:768px){
